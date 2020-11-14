@@ -4,8 +4,8 @@
 VAE_DIR = '/N/u/mhaghir/Carbonate/CogIA_project/WorldModelsExperiments/carracing/vae'
 
 import subprocess
-# subprocess.call(['ln', '-s',  VAE_DIR + '/vae.py', '.']) # create soft links
-# subprocess.call(['ln', '-s',  VAE_DIR + '/vae.json', '.'])
+subprocess.call(['ln', '-s',  VAE_DIR + '/vae.py', '.']) # create soft links
+subprocess.call(['ln', '-s',  VAE_DIR + '/vae.json', '.'])
 import tensorflow as tf
 from vae import ConvVAE
 
