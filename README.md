@@ -12,7 +12,10 @@ In this project a number of experiments have been performed using mainly the fra
 ### Inputs from the pong game
 
 
+![ball and paddles](https://github.com/mhaqir/CIAIP/blob/main/Pong/videos/ball_pad.gif) ![pad up](https://github.com/mhaqir/CIAIP/blob/main/Pong/videos/pad_u.gif)
 
-![ball and paddles](https://github.com/mhaqir/CIAIP/blob/main/Pong/videos/ball_pad.gif) | ![pad up](https://github.com/mhaqir/CIAIP/blob/main/Pong/videos/pad_u.gif)
+![pad l](https://github.com/mhaqir/CIAIP/blob/main/Pong/videos/pad_l.gif) ![ball](https://github.com/mhaqir/CIAIP/blob/main/Pong/videos/ball.gif)
 
-![pad l](https://github.com/mhaqir/CIAIP/blob/main/Pong/videos/pad_l.gif)| ![ball](https://github.com/mhaqir/CIAIP/blob/main/Pong/videos/ball.gif)
+### Reconstructed output from VAE
+
+![rec](https://github.com/mhaqir/CIAIP/blob/main/Pong/videos/rec_o_p.gif)

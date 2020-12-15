@@ -1,10 +1,11 @@
-
 # Written by Mohammad Haghir Ebrahimabdi
 from copy import deepcopy
 import random
 import numpy as np
 import matplotlib.animation as animation
 import matplotlib.pyplot as plt
+import os
+from itertools import product
 
 def agent(action_set):
   return random.choice(action_set)
@@ -72,26 +73,17 @@ def rec_multiple_frames_plot(nrows, nclos, x_limit, y_limit, x_step, y_step, vae
 	  batch_z = np.expand_dims(np.asarray(xy[i]), 0)
 	  # reconstruct = vae.decode(batch_z)
 	  axs[i].imshow(np.squeeze(vae.decode(batch_z)), cmap = 'gray')
-	fig.savefig('z_explore.pdf')
+	fig.savefig('z_explore.pdf', bbox_inches='tight')
 	plt.close()
 
 
-def create_dataset(filelist, N): # N is the number of trails
+def create_dataset(filelist, N, data_dir): # N is the number of trails
   data = []
   for i in range(N):
     filename = filelist[i]
-    raw_data = np.load(os.path.join(DATA_DIR, filename))['ball']
+    raw_data = np.load(os.path.join(data_dir, filename))['ball']
     raw_data_o_0 = [d for d in raw_data if np.sum(d) != 0]
     data += raw_data_o_0
   return np.expand_dims(np.asarray(data, dtype=np.uint8), -1)
 
 
-def str2bool(v):
-    # codes from : https://stackoverflow.com/questions/15008758/parsing-boolean-values-with-argparse
-
-    if v.lower() in ('yes', 'true', 't', 'y', '1'):
-        return True
-    elif v.lower() in ('no', 'false', 'f', 'n', '0'):
-        return False
-    else:
-        raise argparse.ArgumentTypeError('Boolean value expected.')

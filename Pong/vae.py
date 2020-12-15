@@ -1,4 +1,4 @@
-# ConvVAE model
+# Modified by Mohammad Haghir Ebrahimabdi
 
 import numpy as np
 import json
